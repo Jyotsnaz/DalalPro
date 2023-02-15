@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<parameter name="browser" value="chrome"/>
+
+<listeners>
+<listener class-name="com.DS1.Utility.ListnerSetup"/>
+<listener class-name="com.DS1.Utility.ExtentReporterNG"/>
+</listeners>
+
+  <test thread-count="5" name="Test">
+    <classes>
+     <class name="com.DS1.TestLayer.Create_account"/>
+     <class name="com.DS1.TestLayer.LoginPageTest"/>
+      <class name="com.DS1.TestLayer.BuyFunctionality_intraday_limit"/>
+      <class name="com.DS1.TestLayer.TransactionTest"/>
+      <class name="com.DS1.TestLayer.Buyfunctionality_shares"/>
+      <class name="com.DS1.TestLayer.SellFunctionality"/>
+      <class name="com.DS1.TestLayer.SellFunctionalityIntradayLimit"/>
+     <class name="com.DS1.TestLayer.LogOutFuction"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
